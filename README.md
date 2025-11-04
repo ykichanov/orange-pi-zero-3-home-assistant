@@ -120,6 +120,7 @@ if there are problem with dns like "curl: (6) Could not resolve host: download.d
 ```
 sudo nano /etc/systemd/resolved.conf
 # add Line: DNS=8.8.8.8 1.1.1.1
+sudo systemctl restart systemd-resolved
 ```
 ```sh
 sudo chmod a+r /etc/apt/keyrings/docker.asc
