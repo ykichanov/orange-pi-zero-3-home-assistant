@@ -118,7 +118,8 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyring
 ```
 if there are problem with dns like "curl: (6) Could not resolve host: download.docker.com", add google dns, and repeat previous step
 ```
-echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
+sudo nano /etc/systemd/resolved.conf
+# add Line: DNS=8.8.8.8 1.1.1.1
 ```
 ```sh
 sudo chmod a+r /etc/apt/keyrings/docker.asc
